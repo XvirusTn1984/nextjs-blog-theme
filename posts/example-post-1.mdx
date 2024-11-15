@@ -1,103 +1,94 @@
----
-type: Post
-title: Next.js Blog Theme Style Guide
-description: >-
-  A style guide for a website is a set of design standards that define the look,
-  feel, and behavior of a digital product, ensuring consistency and cohesion
-  across all pages and elements.
-date: '2024-11-06'
----
+import { css } from '@emotion/react';
 
-A style guide for a website is a set of design standards that define the look, feel, and behavior of a digital product, ensuring consistency and cohesion across all pages and elements. It typically includes guidelines for colors, typography, spacing, buttons, icons, and imagery, as well as instructions on voice and tone for content.
-
-# h1 Heading
-
-## h2 Heading
-
-### h3 Heading
-
-#### h4 Heading
-
-##### h5 Heading
-
-###### h6 Heading
-
-## Horizontal Rules
-
-***
-
-## Emphasis
-
-**This is bold text**
-
-**This is bold text**
-
-*This is italic text*
-
-*This is italic text*
-
-~~Strikethrough~~
-
-## Blockquotes
-
-> Blockquotes can also be nested...
+<div
+  css={css`
+    max-width: 600px;
+    margin: 20px auto;
+    border: 3px solid #4a90e2;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    background-color: #e6f7ff;
+    font-family: Arial, sans-serif;
+  `}
 >
-> > ...by using additional greater-than signs right next to each other...
-> >
-> > > ...or with spaces between arrows.
-
-## Lists
-
-Unordered
-
-*   Lorem ipsum dolor sit amet
-*   Consectetur adipiscing elit
-*   Integer molestie lorem at massa
-
-Ordered
-
-1.  Lorem ipsum dolor sit amet
-2.  Consectetur adipiscing elit
-3.  Integer molestie lorem at massa
-
-## Code
-
-Inline `code`
-
-Block code
-
-```
-npm install netlify-cli -g
-```
-
-Syntax highlighting
-
-```js
-var foo = function (bar) {
-  return bar++;
-};
-
-console.log(foo(5));
-```
-
-## Tables
-
-| Option | Description                                                               |
-| ------ | ------------------------------------------------------------------------- |
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default.    |
-| ext    | extension to be used for dest files.                                      |
-
-Right aligned columns
-
-| Option |                                                               Description |
-| -----: | ------------------------------------------------------------------------: |
-|   data | path to data files to supply the data that will be passed into templates. |
-| engine |    engine to be used for processing templates. Handlebars is the default. |
-|    ext |                                      extension to be used for dest files. |
-
-## Links
-
-*   [Next.js on Netlify](https://docs.netlify.com/frameworks/next-js/overview/)
-*   [Use Visual Editor with Next.js](https://docs.netlify.com/visual-editor/frameworks/next/)
-
+  <h2
+    css={css`
+      color: #0070f3;
+      font-size: 28px;
+      margin-bottom: 10px;
+    `}
+  >
+    🎄Bitget Celebrates the Festive Season🎄
+  </h2>
+  <p
+    css={css`
+      color: #333333;
+      font-size: 16px;
+      margin: 15px 0;
+    `}
+  >
+    Join our festive FREE SPIN event and stand a chance to win amazing Ton rewards
+    this Christmas! Experience the joy of crypto with a grand prize of up to{' '}
+    <strong>100 TON</strong>!
+  </p>
+  <img
+    src="https://is.gd/m3S110"
+    alt="Christmas Gifts"
+    css={css`
+      width: 100%;
+      border-radius: 10px;
+      margin: 15px 0;
+    `}
+  />
+  <ul
+    css={css`
+      list-style-type: none;
+      padding: 0;
+      color: #333333;
+      font-size: 16px;
+      text-align: left;
+      margin: 0 auto;
+      max-width: 400px;
+    `}
+  >
+    <li>🎁 Win up to 100 TON</li>
+    <li>🔒 Secure, seamless transactions</li>
+    <li>✨ Enjoy festive crypto cheer</li>
+  </ul>
+  <p
+    css={css`
+      color: #0070f3;
+      font-size: 16px;
+      margin: 15px 0;
+    `}
+  >
+    🎉 Selected participants will have the chance to win by taking part in our exciting
+    spinning challenge. Spin to see if you’re one of the lucky winners!
+  </p>
+  <a
+    href="https://is.gd/CgRB90"
+    css={css`
+      display: inline-block;
+      margin-top: 20px;
+      padding: 15px 30px;
+      background-color: #0070f3;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 18px;
+    `}
+  >
+    Spin for Xmas Gifts!
+  </a>
+  <p
+    css={css`
+      margin-top: 15px;
+      font-size: 14px;
+      color: #666666;
+    `}
+  >
+    Connect your wallet now and let the festivities begin!
+  </p>
+</div>

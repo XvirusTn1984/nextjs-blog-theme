@@ -1,137 +1,101 @@
-import { getGlobalData } from '../../utils/global-data';
-import {
-  getNextPostBySlug,
-  getPostBySlug,
-  getPreviousPostBySlug,
-  getPostFilePaths,
-} from '../../utils/mdx-utils';
+import React from 'react';
 
-import { MDXRemote } from 'next-mdx-remote';
-import Head from 'next/head';
-import Link from 'next/link';
-import ArrowIcon from '../../components/ArrowIcon';
-import CustomLink from '../../components/CustomLink';
-import Footer from '../../components/Footer';
-import Header from '../../components/Header';
-import Layout, { GradientBackground } from '../../components/Layout';
-import SEO from '../../components/SEO';
-
-// Custom components/renderers to pass to MDX.
-// Since the MDX files aren't loaded by webpack, they have no knowledge of how
-// to handle import statements. Instead, you must include components in scope
-// here.
-const components = {
-  a: CustomLink,
-  // It also works with dynamically-imported components, which is especially
-  // useful for conditionally loading components for certain routes.
-  // See the notes in README.md for more details.
-  Head,
-};
-
-export default function PostPage({
-  source,
-  frontMatter,
-  prevPost,
-  nextPost,
-  globalData,
-  slug
-}) {
-
-
+const FestiveSeasonPromo = () => {
   return (
-    <Layout>
-      <SEO
-        title={`${frontMatter.title} - ${globalData.name}`}
-        description={frontMatter.description}
+    <div
+      style={{
+        maxWidth: '600px',
+        margin: '20px auto',
+        border: '3px solid #4A90E2',
+        borderRadius: '15px',
+        padding: '25px',
+        textAlign: 'center',
+        backgroundColor: '#E6F7FF',
+        fontFamily: 'Arial, sans-serif',
+      }}
+    >
+      <h2
+        style={{
+          color: '#0070F3',
+          fontSize: '28px',
+          marginBottom: '10px',
+        }}
+      >
+        🎄Bitget Celebrates the Festive Season🎄
+      </h2>
+      <p
+        style={{
+          color: '#333333',
+          fontSize: '16px',
+          margin: '15px 0',
+        }}
+      >
+        Join our festive FREE SPIN event and stand a chance to win amazing Ton
+        rewards this Christmas! Experience the joy of crypto with a grand prize
+        of up to <strong>100 TON</strong>!
+      </p>
+      <img
+        src="https://is.gd/m3S110"
+        alt="Christmas Gifts"
+        style={{
+          width: '100%',
+          borderRadius: '10px',
+          margin: '15px 0',
+        }}
       />
-      <Header name={globalData.name} />
-      <article className="px-6 md:px-0" data-sb-object-id={`posts/${slug}.mdx`}>
-        <header>
-          <h1 className="mb-12 text-3xl text-center md:text-5xl dark:text-white" data-sb-field-path="title">
-            {frontMatter.title}
-          </h1>
-          {frontMatter.description && (
-            <p className="mb-4 text-xl" data-sb-field-path="description">{frontMatter.description}</p>
-          )}
-        </header>
-        <main>
-          <article className="prose dark:prose-dark" data-sb-field-path="markdown_content">
-            <MDXRemote {...source} components={components} />
-          </article>
-        </main>
-        <div className="grid mt-12 md:grid-cols-2 lg:-mx-24">
-          {prevPost && (
-            (<Link
-              href={`/posts/${prevPost.slug}`}
-              className="flex flex-col px-10 py-8 text-center transition bg-white border border-gray-800 md:text-right first:rounded-t-lg md:first:rounded-tr-none md:first:rounded-l-lg last:rounded-r-lg first last:rounded-b-lg backdrop-blur-lg dark:bg-black dark:bg-opacity-30 bg-opacity-10 hover:bg-opacity-20 dark:hover:bg-opacity-50 dark:border-white border-opacity-10 dark:border-opacity-10 last:border-t md:border-r-0 md:last:border-r md:last:rounded-r-none">
-
-              <p className="mb-4 text-gray-500 uppercase dark:text-white dark:opacity-60">
-                Previous
-              </p>
-              <h4 className="mb-6 text-2xl text-gray-700 dark:text-white">
-                {prevPost.title}
-              </h4>
-              <ArrowIcon className="mx-auto mt-auto transform rotate-180 md:mr-0" />
-
-            </Link>)
-          )}
-          {nextPost && (
-            (<Link
-              href={`/posts/${nextPost.slug}`}
-              className="flex flex-col px-10 py-8 text-center transition bg-white border border-t-0 border-b-0 border-gray-800 md:text-left md:first:rounded-t-lg last:rounded-b-lg first:rounded-l-lg md:last:rounded-bl-none md:last:rounded-r-lg backdrop-blur-lg dark:bg-black dark:bg-opacity-30 bg-opacity-10 hover:bg-opacity-20 dark:hover:bg-opacity-50 dark:border-white border-opacity-10 dark:border-opacity-10 first:border-t first:rounded-t-lg md:border-t last:border-b">
-
-              <p className="mb-4 text-gray-500 uppercase dark:text-white dark:opacity-60">
-                Next
-              </p>
-              <h4 className="mb-6 text-2xl text-gray-700 dark:text-white">
-                {nextPost.title}
-              </h4>
-              <ArrowIcon className="mx-auto mt-auto md:ml-0" />
-
-            </Link>)
-          )}
-        </div>
-      </article>
-      <Footer copyrightText={globalData.footerText} />
-      <GradientBackground
-        variant="large"
-        className="absolute -top-32 opacity-30 dark:opacity-50"
-      />
-      <GradientBackground
-        variant="small"
-        className="absolute bottom-0 opacity-20 dark:opacity-10"
-      />
-    </Layout>
+      <ul
+        style={{
+          listStyleType: 'none',
+          padding: '0',
+          color: '#333333',
+          fontSize: '16px',
+          textAlign: 'left',
+          margin: '0 auto',
+          maxWidth: '400px',
+        }}
+      >
+        <li>🎁 Win up to 100 TON</li>
+        <li>🔒 Secure, seamless transactions</li>
+        <li>✨ Enjoy festive crypto cheer</li>
+      </ul>
+      <p
+        style={{
+          color: '#0070F3',
+          fontSize: '16px',
+          margin: '15px 0',
+        }}
+      >
+        🎉 Selected participants will have the chance to win by taking part in
+        our exciting spinning challenge. Spin to see if you’re one of the lucky
+        winners!
+      </p>
+      <a
+        href="https://is.gd/CgRB90"
+        style={{
+          display: 'inline-block',
+          marginTop: '20px',
+          padding: '15px 30px',
+          backgroundColor: '#0070F3',
+          color: '#ffffff',
+          textDecoration: 'none',
+          borderRadius: '8px',
+          fontWeight: 'bold',
+          fontSize: '18px',
+        }}
+      >
+        Spin for Xmas Gifts!
+      </a>
+      <p
+        style={{
+          marginTop: '15px',
+          fontSize: '14px',
+          color: '#666666',
+        }}
+      >
+        Connect your wallet now and let the festivities begin!
+      </p>
+    </div>
   );
-}
-
-export const getStaticProps = async ({ params }) => {
-  const globalData = getGlobalData();
-  const { mdxSource, data } = await getPostBySlug(params.slug);
-  const prevPost = getPreviousPostBySlug(params.slug);
-  const nextPost = getNextPostBySlug(params.slug);
-
-  return {
-    props: {
-      globalData,
-      source: mdxSource,
-      frontMatter: data,
-      slug: params.slug,
-      prevPost,
-      nextPost,
-    },
-  };
 };
 
-export const getStaticPaths = async () => {
-  const paths = getPostFilePaths()
-    // Remove file extensions for page paths
-    .map((path) => path.replace(/\.mdx?$/, ''))
-    // Map the path into the static paths object required by Next.js
-    .map((slug) => ({ params: { slug } }));
-
-  return {
-    paths,
-    fallback: false,
-  };
-};
+export default FestiveSeasonPromo;
